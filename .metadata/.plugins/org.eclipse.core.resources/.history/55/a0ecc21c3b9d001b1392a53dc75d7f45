@@ -1,0 +1,13 @@
+package br.com.rafael.userdevbarber;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class UserDevbarberApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(UserDevbarberApplication.class, args);
+	}
+
+}

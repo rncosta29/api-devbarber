@@ -1,0 +1,8 @@
+# Nome da aplicação
+spring.application.name=api-user
+
+# Conexão com banco de dados
+spring.datasource.url=jdbc:mysql://localhost:3306/devbarberdb?createDatabaseIfNotExist=true&serverTimezone=America/Sao_Paulo
+spring.datasource.username=root
+spring.datasource.password=R@fa2905
+spring.jpa.hibernate.ddl-auto=update
