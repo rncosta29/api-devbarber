@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,6 +32,13 @@ public class UserResource {
 		return ResponseEntity.ok(list);
 	}
 	
+	@GetMapping(path = "/{id}")
+	public ResponseEntity<User> findById(@PathVariable Long id) {
+		User user = service.findById(id);
+		return ResponseEntity.ok(user);
+	}
+	
+	@PostMapping(path = "/add")
 	public ResponseEntity<Data> addUser(@RequestBody UserDTO userDTO) throws Exception {
 		
 		String encodedPassword = new BCryptPasswordEncoder().encode(userDTO.getPassword());
@@ -42,7 +51,9 @@ public class UserResource {
 		user.setActive(true);
 		user.setAvatar("https://api.b7web.com.br/devbarber/media/avatars/default.png");
 		user.setInsertedDate(new Date());
+
 		service.toCheckEmail(user.getEmail());
+		
 		
 		//MyUserDetails userDetails = new MyUserDetails(user);
 		

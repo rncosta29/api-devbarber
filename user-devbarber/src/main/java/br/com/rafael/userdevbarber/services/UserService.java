@@ -52,7 +52,7 @@ public class UserService implements IUserService {
 	public void toCheckEmail(String email) {
 		User user = repository.findByEmail(email);
 		
-		if(user.getEmail().contains(email)) {
+		if(user != null) {
 			throw new ObjectNotFoundException("E-mail ja está cadastrado");
 		}
 	}

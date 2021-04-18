@@ -2,8 +2,6 @@ package br.com.rafael.userdevbarber.dto;
 
 import java.io.Serializable;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import br.com.rafael.userdevbarber.entities.User;
 
 public class UserDTO implements Serializable {
@@ -13,7 +11,6 @@ public class UserDTO implements Serializable {
 	private Long id;
 	private String name;
 	private String email;
-	@JsonIgnore
 	private String password;
 	
 	public UserDTO() {

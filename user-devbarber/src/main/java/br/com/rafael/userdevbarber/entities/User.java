@@ -23,29 +23,23 @@ public class User implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
 	private Long id;
 	
 	@NotNull
-	@Column(name = "name")
 	private String name;
-	
-	@Column(name = "avatar")
+
 	private String avatar;
 	
 	@NotNull
-	@Column(name = "email")
+	@Column(unique = true)
 	private String email;
 	
 	@NotNull
-	@Column(name = "password")
 	@JsonIgnore
 	private String password;
 	
-	@Column(name = "active")
 	private Boolean active;
-	
-	@Column(name = "insertedDate")
+
 	private Date insertedDate;
 	
 	public User() {

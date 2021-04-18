@@ -10,4 +10,5 @@
 <fullyQualifiedTypeName name="br.com.rafael.userdevbarber.entities.User"/>
 <fullyQualifiedTypeName name="br.com.rafael.userdevbarber.dto.Data"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 </qualifiedTypeNameHistroy>
