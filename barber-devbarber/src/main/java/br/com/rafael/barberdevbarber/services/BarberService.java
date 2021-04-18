@@ -3,11 +3,13 @@ package br.com.rafael.barberdevbarber.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.com.rafael.barberdevbarber.entities.Barber;
 import br.com.rafael.barberdevbarber.interfaces.IBarberService;
 import br.com.rafael.barberdevbarber.repositories.BarberRepository;
 
+@Service
 public class BarberService implements IBarberService {
 
 	@Autowired
