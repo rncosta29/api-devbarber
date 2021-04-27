@@ -1,9 +1,0 @@
-package br.com.rafael.userdevbarber.repositories;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import br.com.rafael.userdevbarber.entities.User;
-
-public interface UserRepository extends JpaRepository<User, Long> {
-
-}

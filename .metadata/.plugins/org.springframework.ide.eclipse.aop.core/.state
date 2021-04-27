@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="user-devbarber"/>
-<aop-project name="devbarber-api-gateway-zuul"/>
-<aop-project name="barber-devbarber"/>
-<aop-project name="eureka-server-devbarber"/>
-<aop-project name="config-server-devbarber"/>
+<aop-project name="devbarber-eureka-server"/>
+<aop-project name="devbarber-oauth"/>
+<aop-project name="devbarber-user"/>
+<aop-project name="gateway"/>
+<aop-project name="config"/>
+<aop-project name="devbarber-barber"/>
 </aop-reference-model>
